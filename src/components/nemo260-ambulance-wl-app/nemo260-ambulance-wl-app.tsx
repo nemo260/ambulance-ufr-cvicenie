@@ -12,6 +12,8 @@ declare global {
 export class Nemo260AmbulanceWlApp {
 
   @State() private relativePath = "";
+  @Prop() apiBase: string;
+  @Prop() ambulanceId: string;
 
    @Prop() basePath: string="";
 
@@ -58,7 +60,7 @@ export class Nemo260AmbulanceWlApp {
             oneditor-closed={() => navigate("./list")}
           ></nemo260-ambulance-wl-editor>
         ) : (
-          <nemo260-ambulance-wl-list
+          <nemo260-ambulance-wl-list ambulance-id={this.ambulanceId} api-base={this.apiBase}
             onentry-clicked={(ev: CustomEvent<string>) => navigate("./entry/" + ev.detail)}>
             </nemo260-ambulance-wl-list>
         )}
