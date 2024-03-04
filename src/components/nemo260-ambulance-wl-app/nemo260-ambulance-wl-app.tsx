@@ -57,6 +57,7 @@ export class Nemo260AmbulanceWlApp {
         {element === "editor" ? (
           <nemo260-ambulance-wl-editor
             entry-id={entryId}
+            ambulance-id={this.ambulanceId} api-base={this.apiBase}
             oneditor-closed={() => navigate("./list")}
           ></nemo260-ambulance-wl-editor>
         ) : (

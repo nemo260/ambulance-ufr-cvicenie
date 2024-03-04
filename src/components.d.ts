@@ -12,6 +12,8 @@ export namespace Components {
         "basePath": string;
     }
     interface Nemo260AmbulanceWlEditor {
+        "ambulanceId": string;
+        "apiBase": string;
         "entryId": string;
     }
     interface Nemo260AmbulanceWlList {
@@ -81,6 +83,8 @@ declare namespace LocalJSX {
         "basePath"?: string;
     }
     interface Nemo260AmbulanceWlEditor {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         "entryId"?: string;
         "onEditor-closed"?: (event: Nemo260AmbulanceWlEditorCustomEvent<string>) => void;
     }
